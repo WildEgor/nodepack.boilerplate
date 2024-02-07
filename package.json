@@ -1,5 +1,5 @@
 {
-  "name": "nodepack.boilerplate",
+  "name": "@WildEgor/nodepack.boilerplate",
   "version": "1.1.1",
   "description": "Nodepack Boilerplate - common packages for Node.js projects",
   "author": "Kartashov Egor",
