@@ -7,13 +7,7 @@ import { DemoModule } from './demo/demo.module';
 const bootstrap = async(): Promise<void> => {
   const app = await NestFactory.create<NestFastifyApplication>(
     DemoModule,
-    new FastifyAdapter({
-      // logger: true,
-    }),
-    {
-      // TODO: somehow this doesn't work and initial nest logs are not printed
-      bufferLogs: true,
-    },
+    new FastifyAdapter(),
   );
 
   const logger = new Logger('Bootstrap');
