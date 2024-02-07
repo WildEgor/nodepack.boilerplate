@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "sourceMap": false,
+    "removeComments": false,
+    "pretty": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false
+  },
+  "exclude": [
+    "node_modules",
+    "src/main.ts",
+    "src/demo",
+    "examples",
+    "modules",
+    "scripts",
+    "tests"
+  ]
+}

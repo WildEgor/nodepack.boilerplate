@@ -1,0 +1,33 @@
+name: Testing
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  release:
+    name: Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node LTS
+        id: install_node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+          registry-url: 'https://npm.pkg.github.com'
+
+      - name: Install Deps
+        id: install_deps
+        run: yarn install --frozen-lockfile
+
+      - name: Typescript check
+        id: test_ts
+        run: yarn dev:check
+
+      - name: ESLint check
+        id: test_eslint
+        run: yarn dev:lint
