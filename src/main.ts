@@ -11,7 +11,6 @@ const bootstrap = async(): Promise<void> => {
   );
 
   const logger = new Logger('Bootstrap');
-
   app.enableShutdownHooks();
   app.setGlobalPrefix('api');
   app.enableVersioning({
