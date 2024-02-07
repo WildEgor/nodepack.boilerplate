@@ -1,6 +1,6 @@
 {
   "name": "nodepack.boilerplate",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Nodepack Boilerplate - common packages for Node.js projects",
   "author": "Kartashov Egor",
   "private": false,
